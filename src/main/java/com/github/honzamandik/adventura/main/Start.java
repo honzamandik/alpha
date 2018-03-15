@@ -28,7 +28,7 @@ public class Start
         if (args.length < 1) {
             ui.hraj();
         } else {
-            ui.hrajZeSouboru(args[0]);
+//            ui.hrajZeSouboru(args[0]);
         }
     }
     
