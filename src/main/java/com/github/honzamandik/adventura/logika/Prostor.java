@@ -29,6 +29,9 @@ public class Prostor {
     private Set<Prostor> vychody;   // obsahuje sousední místnosti
     public Map<String, Vec> veci;
     private List<Postava> postavy;
+    private double x;
+    private double y;
+
 
 
     /**
@@ -266,6 +269,25 @@ public class Prostor {
     public Vec getJeTamVec(String nazev) {
         return veci.get(nazev);
     }
-     
+
+    public Collection<Vec> getVeci() {
+    	return Collections.unmodifiableCollection(veci.values());
+    }
+    
+    public double getX() {
+		return x;
+	}
+
+	public void setX(double x) {
+		this.x = x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public void setY(double y) {
+		this.y = y;
+	}
     
     }
