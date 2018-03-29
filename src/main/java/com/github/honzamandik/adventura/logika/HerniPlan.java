@@ -2,7 +2,7 @@ package com.github.honzamandik.adventura.logika;
 import java.util.HashMap;
 import java.util.Map;
 
-
+import java.util.Observable;
 /**
  * Class HerniPlan - třída představující mapu a stav adventury.
  * 
@@ -13,7 +13,7 @@ import java.util.Map;
  * @author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova, Jan Riha, Jan Mandík
  * @version    ZS 2016/2017
  */
-public class HerniPlan {
+public class HerniPlan extends Observable {
 
     /*private static final String CILOVY_PROSTOR = "chaloupka";*/
 

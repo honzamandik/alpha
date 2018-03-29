@@ -29,7 +29,8 @@ public class Prostor {
     private Set<Prostor> vychody;   // obsahuje sousední místnosti
     public Map<String, Vec> veci;
     private List<Postava> postavy;
-
+    private double x;
+    private double y;
 
     /**
      * Vytvoření prostoru se zadaným popisem, např. "kuchyň", "hala", "trávník
@@ -256,6 +257,26 @@ public class Prostor {
         }
         return hledacka;
     }
+    
+    public Collection<Vec> getVeci() {
+    	return Collections.unmodifiableCollection(veci.values());
+    }
+    
+    public double getX() {
+		return x;
+	}
+
+	public void setX(double x) {
+		this.x = x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public void setY(double y) {
+		this.y = y;
+	}
     
     /**
      * Vrátí, jestli je věc v místnosti

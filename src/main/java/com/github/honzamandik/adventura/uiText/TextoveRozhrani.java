@@ -6,37 +6,37 @@ import com.github.honzamandik.adventura.logika.IHra;
 /**
  *  Class TextoveRozhrani
  * 
- *  Toto je uÅ¾ivatelskÃ©ho rozhranÃ­ aplikace Adventura
- *  Tato tÅ™Ã­da vytvÃ¡Å™Ã­ instanci tÅ™Ã­dy Hra, kterÃ¡ pÅ™edstavuje logiku aplikace.
- *  ÄŒte vstup zadanÃ½ uÅ¾ivatelem a pÅ™edÃ¡vÃ¡ tento Å™etÄ›zec logice a vypisuje odpovÄ›Ä� logiky na konzoli.
- *  Pokud chcete hrÃ¡t tuto hru, vytvoÅ™te instanci tÃ©to tÅ™Ã­dy
- *  a potÃ© na nÃ­ vyvolejte metodu "hraj". 
+ *  Toto je uživatelského rozhraní aplikace Adventura
+ *  Tato třída vytváří instanci třídy Hra, která představuje logiku aplikace.
+ *  Čte vstup zadaný uživatelem a předává tento řetězec logice a vypisuje odpověď logiky na konzoli.
+ *  Pokud chcete hrát tuto hru, vytvořte instanci této třídy
+ *  a poté na ní vyvolejte metodu "hraj". 
  *  
  *
  *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
- *@version    pro Å¡kolnÃ­ rok 2014/2015
+ *@version    pro školní rok 2014/2015
  */
 
 public class TextoveRozhrani {
     private IHra hra;
 
     /**
-     *  VytvÃ¡Å™Ã­ hru.
+     *  Vytváří hru.
      */
     public TextoveRozhrani(IHra hra) {
         this.hra = hra;
     }
 
     /**
-     *  HlavnÃ­ metoda hry. VypÃ­Å¡e ÃºvodnÃ­ text a pak opakuje Ä�tenÃ­ a zpracovÃ¡nÃ­
-     *  pÅ™Ã­kazu od hrÃ¡Ä�e do konce hry (dokud metoda konecHry() z logiky nevrÃ¡tÃ­
-     *  hodnotu true). Nakonec vypÃ­Å¡e text epilogu.
+     *  Hlavní metoda hry. Vypíše úvodní text a pak opakuje čtení a zpracování
+     *  příkazu od hráče do konce hry (dokud metoda konecHry() z logiky nevrátí
+     *  hodnotu true). Nakonec vypíše text epilogu.
      */
     public void hraj() {
         System.out.println(hra.vratUvitani());
 
-        // zÃ¡kladnÃ­ cyklus programu - opakovanÄ› se Ä�tou pÅ™Ã­kazy a potÃ©
-        // se provÃ¡dÄ›jÃ­ do konce hry.
+        // základní cyklus programu - opakovaně se čtou příkazy a poté
+        // se provádějí do konce hry.
 
         while (!hra.konecHry()) {
             String radek = prectiString();
@@ -47,9 +47,9 @@ public class TextoveRozhrani {
     }
 
     /**
-     *  Metoda pÅ™eÄ�te pÅ™Ã­kaz z pÅ™Ã­kazovÃ©ho Å™Ã¡dku
+     *  Metoda přečte příkaz z příkazového řádku
      *
-     *@return    VracÃ­ pÅ™eÄ�tenÃ½ pÅ™Ã­kaz jako instanci tÅ™Ã­dy String
+     *@return    Vrací přečtený příkaz jako instanci třídy String
      */
     private String prectiString() {
         Scanner scanner = new Scanner(System.in);
