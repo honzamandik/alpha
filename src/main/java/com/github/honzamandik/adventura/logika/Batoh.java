@@ -124,6 +124,14 @@ public class Batoh
         }
         return odstranena;
     }
+
+    public List<Vec> getInventar() {
+        return inventar;
+    }
+    
+    
+    
+    
     
     /**
      * Metoda vrátí maximální nosnost

@@ -270,9 +270,6 @@ public class Prostor {
         return veci.get(nazev);
     }
 
-    public Collection<Vec> getVeci() {
-    	return Collections.unmodifiableCollection(veci.values());
-    }
     
     public double getX() {
 		return x;
@@ -289,5 +286,18 @@ public class Prostor {
 	public void setY(double y) {
 		this.y = y;
 	}
+
+    public Map<String, Vec> getVeci() {
+        return veci;
+    }
+        
+        public String seznamVychodu() 
+    {
+        String vracenyText = "vychody:";
+        for (Prostor sousedni : vychody) {
+             vracenyText += " " + sousedni.getNazev();
+        }
+        return vracenyText;
+    }
     
     }

@@ -1,0 +1,66 @@
+﻿----------------------- Page 1-----------------------
+
+  
+
+Uživatelská příručka ke hře Ztracený telefon  
+                                         Semestrální práce na předmět 4IT101  
+
+                                                         Jan Mandík  
+
+                                                      manj01@vse.cz  
+
+  
+
+Příběh: Jsi úspěšný obchodník, který očekává důležitý telefonát ve 12 hodin. Vzbudil ses, na podle  
+hodinách je za pět minut dvanáct a uvědomil sis, že jsi včera při návratu domů někde ve svém velkém  
+bytě zašantročil svůj telefon, který měl v tu chvíli zrovna vybitou baterku. Musíš ho najít, nebo tvoje  
+kariéra skončí. Ale pozor, tvůj byt je docela veliký a nebydlíš v  něm sám!  
+
+Funkce hry: Základem hry jsou místnosti, které se prochází příkazem jdi. V  místech můžou být věci,  
+které můžeme prozkoumat nebo zkusit sebrat, nicméně ne všechny jdou sebrat. Také můžou být  
+v místnostech osoby, se kterými lze mluvit příkazem mluv. Hra lze kdykoliv ukončit příkazem konec.  
+
+Příkazy  
+                                               Formulace          Funkce  
+                                                napoveda          Vypíše příkazy a další užitečné informace  
+                                           jdi (mís tnost)        Je-li to možné,  přesune hráče do zadané  
+                                                                  místnosti  
+                                                      konec       Ukončí hru  
+                      vezmi (předmět v místnosti)                 Přesune předmět do baťohu, povoluje-li to  
+                                                                  předmět a není-li batoh přeplněný (kapacita 2)  
+              prokoumej (předmět v místnosti)                     Vypíše další informace k předmětu  
+                        zahod (předmět v baťohu)                  Přesune předmět z  baťohu do aktuální místnosti  
+                           mluv (osoba v místnosti)    Vypíše to, co říká daná osoba  
+                                pouzij (věc v baťohu)             Použije předmět v místnosti  
+                                                      batoh       Vypíše seznam věcí v baťohu  
+  
+
+                                           
+
+----------------------- Page 2-----------------------
+
+  
+
+Místnosti  
+Hra začíná v ložnici.  
+
+                                                      Ložnice 
+
+                           Kuchyně                                                 Záchod 
+
+                                                     Hala 
+
+                                      Koupelna                          Pracovna 
+
+                                                                                                                          
+
+Spuštění  
+Hru je možné spustit příkazem  
+
+  java –Dfile.encoding=CP852 –jar hledani-telefonu.jar  
+
+ zadaného z  příkazového řádu (je třeba být ve složce, kde je ztraceny_telefon.jar uložen. (Příkazový  
+řádek pro složku, kde se zrovna nacházíte nejsnáze otevřete stisknutím pravého tlačítka myši a shift a  
+následného vybrání příslušné možnosti.)  
+
+  

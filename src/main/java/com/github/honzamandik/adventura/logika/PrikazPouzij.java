@@ -46,7 +46,7 @@ public class PrikazPouzij implements IPrikaz
      */
     private String mytiNadobi (Prostor prostor) {
         String text;
-        Vec ciste_nadobi = new Vec("Čisté_nádobí", "Hromada čistého nádobí", false);
+        Vec ciste_nadobi = new Vec("Čisté_nádobí", "Hromada čistého nádobí", false,"ciste_nadobi.jpg");
         // mýt nádobí lze pouze v kuchyni"
         if (prostor.getNazev().equals("Kuchyně"))  {
             // změní nádobí čisté a přítelkyni na štastnou
@@ -95,7 +95,7 @@ public class PrikazPouzij implements IPrikaz
      */
     private String gumovaniZachodu (Prostor prostor) {
         String text;
-        Vec vybity_telefon = new Vec("Vybitý_telefon", "Tohle je telefon, který hledáš, ale je vybitý", true);
+        Vec vybity_telefon = new Vec("Vybitý_telefon", "Tohle je telefon, který hledáš, ale je vybitý", true,"vybity_telefon.jpg");
         // ověříme, zdali jsme na záchodě"
         if (prostor.getNazev().equals("Záchod"))  {
             text = "Pořádně si použil gumový zvon na záchodovou mísu a světe se div, vyplaval tvůj telefon. Naštěstí je voděoodolný. Máš ale problém, telefon nejde zapnout.";

@@ -74,25 +74,25 @@ public class HerniPlan extends Observable {
         
         // vytvoříme několik věcí
         
-        Vec toaletniPapir = new Vec("Toaletní_papír", "Luxusni role toaletniho papiru", true);
-        Vec toaleta = new Vec("Záchodová_mísa", "Uplne normalni zachod", false);
-        Vec gumovy_zvon = new Vec ("Gumový_zvon", "Věc, kterou lze použít pro uvolnění ucpaného záchoda", true);
-        Vec postel = new Vec("Postel", "Postel, na které spáváš", false);
-        Vec nocni_stolek = new Vec("Noční_stolek", "Noční stolek s malým šuplíčkem", false);
-        Vec polstar = new Vec("Polštář", "Polštář pro dva lidi", true);
-        Vec perina = new Vec("Peřina", "Peřina pro dva lidi", true);
-        Vec kytka = new Vec("Kytka", "Kytka v hodně velkém květináči", false);
-        Vec dok = new Vec("Nabíjecí_dok", "Když do doku dáš telefon, začne se nabíjet", false);
-        Vec stul = new Vec("Stůl", "Multifunkční stůl", false);
-        Vec zidle = new Vec("Židle", "Židle, na které se dá sedět", false);
+        Vec toaletniPapir = new Vec("Toaletní_papír", "Luxusni role toaletniho papiru", true,"toaletni_papir.jpg");
+        Vec toaleta = new Vec("Záchodová_mísa", "Uplne normalni zachod", false,"toaleta.jpg");
+        Vec gumovy_zvon = new Vec ("Gumový_zvon", "Věc, kterou lze použít pro uvolnění ucpaného záchoda", true,"gumovy_zvon.jpg");
+        Vec postel = new Vec("Postel", "Postel, na které spáváš", false,"postel.jpg");
+        Vec nocni_stolek = new Vec("Noční_stolek", "Noční stolek s malým šuplíčkem", false,"nocni_stolek.jpg");
+        Vec polstar = new Vec("Polštář", "Polštář pro dva lidi", true,"polstar.jpg");
+        Vec perina = new Vec("Peřina", "Peřina pro dva lidi", true,"perina.jpg");
+        Vec kytka = new Vec("Kytka", "Kytka v hodně velkém květináči", false,"kytka.jpg");
+        Vec dok = new Vec("Nabíjecí_dok", "Když do doku dáš telefon, začne se nabíjet", false,"dok.jpg");
+        Vec stul = new Vec("Stůl", "Multifunkční stůl", false,"stul.jpg");
+        Vec zidle = new Vec("Židle", "Židle, na které se dá sedět", false,"zidle.jpg");
        /* Vec zidle2 = new Vec("Židle", "Jedna ze dvou židlí, co jsou u stolu", false);*/
-        Vec linka = new Vec("Kuchyňská_linka", "Kuchyňská link se dřezem. varnou deskou a dalšíma věcma, co patří na kuchyňskou linku", false);
-        Vec cistici_prostredek = new Vec("Čistící_prostředek", "Tímhle se meje nádobí", true);
-        Vec spinave_nadobi = new Vec("Špinavé_nádobí", "Hromada špinavého nádobí", false);
-        Vec vana = new Vec("Vana", "Ve vaně je možné se vykoupat", false);
-        Vec umyvadlo = new Vec("Umyvadlo", "V umyvadle je možné si umýt ruce", false);
-        Vec mydlo = new Vec("Mýdlo", "Mýdlo slouží k mytí rukou", true);
-        Vec snubni_prsten = new Vec("Snubní_prsten", "Zlatý prsten, kterým jsi chtěl požádat svou přítelkyni o ruku", true);
+        Vec linka = new Vec("Kuchyňská_linka", "Kuchyňská link se dřezem. varnou deskou a dalšíma věcma, co patří na kuchyňskou linku", false,"linka.jpg");
+        Vec cistici_prostredek = new Vec("Čistící_prostředek", "Tímhle se meje nádobí", true,"cistici_prostredek.jpg");
+        Vec spinave_nadobi = new Vec("Špinavé_nádobí", "Hromada špinavého nádobí", false,"spinave_nadobi.jpg");
+        Vec vana = new Vec("Vana", "Ve vaně je možné se vykoupat", false,"vana.jpg");
+        Vec umyvadlo = new Vec("Umyvadlo", "V umyvadle je možné si umýt ruce", false,"umyvadlo.jpg");
+        Vec mydlo = new Vec("Mýdlo", "Mýdlo slouží k mytí rukou", true,"mydlo.jpg");
+        Vec snubni_prsten = new Vec("Snubní_prsten", "Zlatý prsten, kterým jsi chtěl požádat svou přítelkyni o ruku", true,"snubni_prsten.jpg");
         
         
 
@@ -162,6 +162,12 @@ public class HerniPlan extends Observable {
     public boolean getVyhra() {
         
         return vyhra;
+    }
+    
+    @Override
+    public void notifyObservers(){
+        setChanged();
+        super.notifyObservers();
     }
 
 }
