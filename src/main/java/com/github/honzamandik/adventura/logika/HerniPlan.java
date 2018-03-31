@@ -122,6 +122,20 @@ public class HerniPlan extends Observable {
         // vložíme postavu
         hala.vlozPostavu(pritelkyne);
         
+        //souřadnice
+        loznice.setX(135);
+        loznice.setY(15);
+        hala.setX(135);
+        hala.setY(117);
+        pracovna.setX(50);
+        pracovna.setY(152);
+        kuchyne.setX(136);
+        kuchyne.setY(200);
+        zachod.setX(231);
+        zachod.setY(148);
+        koupelna.setX(235);
+        koupelna.setY(80);
+        
 
         aktualniProstor = loznice;  // hra začíná v ložnici
     }
